@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+main{
+   width: 100vw;
+   display:flex;
+   justify-content: space-between;
+   align-items: start;
+   
+}
+
+.izquierda{
+    flex: 1;
+    text-align: left;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.izquierda form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+
+.derecha{
+    flex: 1;
+    text-align: right;
+    padding: 20px;
+}
+
+.derecha caption{
+    text-align: center; 
+}

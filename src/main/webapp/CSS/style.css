@@ -1,0 +1,76 @@
+:root {
+  --color-apartados: gray;
+  --color-whiteBackground: hsl(0, 0%, 100%);
+  --color-header: rgb(28, 27, 27);
+  --color-outline-purple: rgb(79, 70, 91);
+  --outline-caja-usuario: rgb(71, 13, 146);
+}
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+}
+.caja-texto {
+  position: absolute;
+  align-self: end;
+  padding: 12px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+
+.caja-texto button {
+  background: none;
+  color: var(--color-whiteBackground);
+  border-color: var(--color-whiteBackground);
+  font-size: 20px;
+  padding: 3px 12px;
+}
+
+.banner img {
+  width: 100%;
+  height: 450px;
+}
+
+/* #main-inicio {
+  flex: 1;
+  padding-bottom: 10px;
+} */
+
+.ofertas {
+  padding: 10px;
+}
+
+/*Eso de lista contenedor se refiere a los items que te podrian gustar, que se deslizan con el mouse*/
+.items-lista-contenedor {
+  padding-left: 12px;
+}
+.items-lista {
+  display: flex;
+  gap: 6px;
+  list-style-type: none;
+  padding-left: 0;
+  overflow-x: scroll;
+}
+.items-lista li {
+  width: 200px;
+  flex: 1 0 auto;
+}
+.items-lista img {
+  width: 100%;
+  height: 250px;
+}
+.items-lista::-webkit-scrollbar {
+  max-width: 60px;
+  height: 10px;
+}
+.items-lista::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}

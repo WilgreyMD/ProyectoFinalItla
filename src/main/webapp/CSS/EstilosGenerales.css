@@ -1,0 +1,128 @@
+:root {
+  --color-apartados: gray;
+  --color-whiteBackground: hsl(0, 0%, 100%);
+  --color-header: rgb(28, 27, 27);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  padding: 5px 20px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-header);
+  z-index: 3;
+}
+.logo {
+  display: flex;
+  line-height: 6px;
+}
+
+.logo h1 a {
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--color-whiteBackground);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  width: 350px;
+  list-style-type: none;
+}
+
+.menu li a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  padding: auto 5px;
+  color: var(--color-whiteBackground);
+}
+
+.menu li:hover a {
+  color: var(--color-apartados);
+  transition: all 0.9s ease;
+}
+
+.current-page a {
+  color: var(--color-apartados);
+}
+main {
+  flex: 1;
+  padding-bottom: 10px;
+}
+.lupa {
+  max-width: 500px;
+  position: relative;
+}
+.lupa input {
+  width: 400px;
+  padding: 6px;
+  background: none;
+  border-radius: 30px;
+  color: var(--color-whiteBackground);
+  padding-left: 15px;
+}
+.lupa button {
+  padding: 6px 16px;
+  background: none;
+  border-radius: 30px;
+  color: var(--color-whiteBackground);
+}
+.footer {
+  margin-top: auto;
+  height: 50px;
+  background-color: var(--color-header);
+  color: var(--color-whiteBackground);
+}
+.footer p {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .lupa {
+    display: none;
+  }
+}
+
+.lupa .coincidencias {
+  width: 400px;
+  height: 200px;
+  overflow-y: scroll;
+  background-color: white;
+  position: absolute;
+  visibility: hidden;
+  border-radius: 10px;
+}
+
+.coincidencias::-webkit-scrollbar {
+  max-width: 10px;
+  height: 10px;
+}
+.coincidencias::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.lupa ul {
+  list-style: none;
+  padding-left: 6px;
+}
+.lupa ul li {
+  padding-bottom: 6px;
+}
+.lupa ul li:hover {
+  background-color: rgb(234, 224, 244);
+}
+
+.lupa input:focus ~ .coincidencias {
+  visibility: visible;
+}

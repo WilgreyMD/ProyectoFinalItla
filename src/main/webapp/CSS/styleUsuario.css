@@ -1,0 +1,51 @@
+:root {
+  --color-apartados: gray;
+  --color-whiteBackground: hsl(0, 0%, 100%);
+  --color-header: rgb(28, 27, 27);
+  --color-outline-purple: rgb(79, 70, 91);
+  --outline-caja-usuario: rgb(71, 13, 146);
+}
+
+#main-usuario {
+  padding-top: 20px;
+}
+.perfil-cuadrilla {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+  min-height: 230px;
+  outline: 5px solid var(--color-outline-purple);
+  outline-offset: 6px;
+}
+.perfil-cuadrilla img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  outline: 5px solid var(--outline-caja-usuario);
+  outline-offset: 6px;
+  z-index: 0;
+}
+
+.productos-comprados h2 {
+  margin-top: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: solid 5px var(--outline-caja-usuario);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  width: 30%;
+}
+
+/*Aqui neutralizo el hover que tenian las cajas al pasarle el mouse, porque en usuario no quiero que estos resalten*/
+.productos-comprados .contenedor-cajas .cajas:hover {
+  transform: none;
+  transition: none;
+}
+.productos-comprados .contenedor-cajas {
+  width: 75%;
+  margin: auto;
+}
